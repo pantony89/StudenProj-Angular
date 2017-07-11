@@ -1,0 +1,27 @@
+﻿<div class="panel panel-primary"
+     ng-controller="studentListCtrl as vm">
+    <div class="panel-heading"
+         style="font-size:large">
+        Product List
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <td>StudentName</td>
+                    <td>LastName</td>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="student in vm.student">
+                    <td>{{ student.FirstName}}</td>
+                    <td>{{student.LastName }}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

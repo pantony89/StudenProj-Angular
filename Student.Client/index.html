@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Student Management</title>
+
+    <!-- Style sheets -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <!-- Library Scripts -->
+    <script src="scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+
+    <script src="common/common.services.js"></script>
+    <script src="common/studentResource.js"></script>
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <!-- Product Controllers -->
+    <!--<script src="app/products/productListCtrl.js"></script-->>
+    <script src="app/student/studentListCtrl.js"></script>
+</head>
+
+<body ng-app="studentManagement">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">Student Management</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+       <table>
+           <thead>
+               <tr>
+                   <td>StudentName</td>
+                   <td>LastName</td>
+               </tr>
+           </thead>
+         <tbody ng-controller="studentListCtrl as students">
+             <tr ng-repeat="student in students">
+                 <td>{{student.FirstName}}</td>
+                 <td>{{student.LastName}}</td>
+             </tr>
+         </tbody>
+
+       </table>
+    </div>
+
+
+
+</body>
+
+</html>
