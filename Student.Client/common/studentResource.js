@@ -9,7 +9,7 @@
                     studentResource])
 
     function studentResource($resource, appSettings) {
-        return $resource(appSettings.serverPath + "/api/Student");
+        return $resource(appSettings.serverPath + "/api/Student:id");
     }
 }());
 

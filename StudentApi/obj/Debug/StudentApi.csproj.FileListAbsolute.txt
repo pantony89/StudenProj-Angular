@@ -62,8 +62,11 @@ E:\Student\StudentApi\obj\Debug\StudentApi.dll
 E:\Student\StudentApi\obj\Debug\StudentApi.pdb
 E:\Student\StudentApi\obj\Debug\StudentApi.Migrations.Initials.resources
 E:\Student\StudentApi\obj\Debug\StudentApi.csproj.GenerateResource.Cache
-E:\Student\StudentApi\obj\Debug\StudentApi.csprojResolveAssemblyReference.cache
 E:\Student\StudentApi\obj\Debug\StudentApi.Migrations.auto.resources
 E:\Student\StudentApi\obj\Debug\StudentApi.Migrations.date.resources
 E:\Student\StudentApi\obj\Debug\StudentApi.Migrations.datauto.resources
 E:\Student\StudentApi\obj\Debug\StudentApi.Migrations._1.resources
+E:\Student\StudentApi\bin\System.Web.Cors.dll
+E:\Student\StudentApi\bin\System.Web.Http.Cors.dll
+E:\Student\StudentApi\bin\System.Web.Http.Cors.xml
+E:\Student\StudentApi\obj\Debug\StudentApi.csprojResolveAssemblyReference.cache

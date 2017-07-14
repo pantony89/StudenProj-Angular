@@ -85,6 +85,7 @@ namespace StudentApi.Models
             try
             {
                 _sdx.Students.Add(data);
+                
                 return true;
             }
             catch (Exception)
@@ -132,5 +133,10 @@ namespace StudentApi.Models
             return null;
         }
 
+        public IQueryable<Student> Search(string search)
+        {
+            var students = _sdx.Students;
+            return students.Where(s=>s.FirstName.Contains(search));
+        }
     }
 }

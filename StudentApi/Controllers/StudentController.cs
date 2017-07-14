@@ -5,9 +5,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace StudentApi.Controllers
 {
+    [EnableCors("http://localhost:55079", "*","*")]
     public class StudentController : ApiController
     {
         StudentRepository STR = new StudentRepository(new StudentDbContext());
@@ -22,6 +24,18 @@ namespace StudentApi.Controllers
 
             }
             catch 
+            {
+                throw;
+            }
+        }
+
+        public IEnumerable<Student> Get(string search)
+        {
+            try
+            {
+                return STR.Search(search);
+            }
+            catch
             {
                 throw;
             }
@@ -47,14 +61,13 @@ namespace StudentApi.Controllers
         public HttpResponseMessage Post([FromBody]Student value)
         {
             try
-            {
-                
+            {        
                 STR.Insert(new Student() {
                     FirstName = value.FirstName,
                     LastName = value.LastName,
                                    
                 });
-                return Request.CreateResponse(HttpStatusCode.OK,STR.SaveChanges());
+                return Request.CreateResponse(HttpStatusCode.OK,STR.SaveChanges(),"Success");
             }
             catch
             {

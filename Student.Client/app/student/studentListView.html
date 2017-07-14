@@ -1,25 +1,27 @@
-﻿<div class="panel panel-primary"
-     ng-controller="studentListCtrl as vm">
+﻿<div class="panel panel-primary">
     <div class="panel-heading"
          style="font-size:large">
-        Product List
+        StudentList
     </div>
-
     <div class="panel-body">
         <table class="table">
-
             <thead>
                 <tr>
-                    <td>StudentName</td>
-                    <td>LastName</td>
-                   
+                    <th>StudentName</th>
+                    <th>LastName</th>
+                    <th>DateOfCreated</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="student in vm.student">
-                    <td>{{ student.FirstName}}</td>
-                    <td>{{student.LastName }}</td>
-                    
+                <tr ng-repeat="student in vm.students">
+                    <td>{{ student.firstName}}</td>
+
+                    <td>{{student.lastName }}</td>
+                    <td>{{ student.dateOfCreated | date}}</td>
+                    <td>
+                        <button data-ng-click="studentGetById(student.id)" class="btn btn-primary">Edit</button> 
+                        <button ng-click="vm.studentDel()"  class="btn btn-primary"> Delete</button> 
+                    </td>
                 </tr>
             </tbody>
         </table>

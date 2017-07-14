@@ -11,6 +11,7 @@ namespace StudentApi.Models
         IQueryable<T> GetAll();
         T GetSingleRecord(int id);
 
+        IQueryable<T> Search(string search);
         bool SaveChanges();
         bool Insert(T data);
         bool Update(T data);
